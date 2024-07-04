@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components/native";
 import theme from "../global/styles/theme";
 import { ITransactions } from "../interface";
+import { View } from "react-native";
 
 interface IProps {
     data: ITransactions;
@@ -20,7 +21,7 @@ export const TransactionsList: React.FunctionComponent<IProps> = ({ data }) => {
             activeOpacity={0.7}
             onPress={() => navigate("TransactionsDetails", data)}
         >
-            <Box>
+            <View>
                 <BoxType>
                     <Type>{data.type}</Type>
 
@@ -41,7 +42,7 @@ export const TransactionsList: React.FunctionComponent<IProps> = ({ data }) => {
                         minimumFractionDigits: 2,
                     })}
                 </Value>
-            </Box>
+            </View>
         </Container>
     );
 };
@@ -49,12 +50,9 @@ export const TransactionsList: React.FunctionComponent<IProps> = ({ data }) => {
 const Container = styled.TouchableOpacity`
     flex: 1;
     margin: 10px 10px 0;
-    /* background-color: ${theme.colors.gray}; */
     padding: 5px;
     border-top-width: 1px;
 `;
-
-const Box = styled.View``;
 
 const BoxType = styled.View`
     flex-direction: row;
@@ -63,13 +61,13 @@ const BoxType = styled.View`
 
 const Type = styled.Text`
     font-weight: 500;
-    font-size: 17px;
+    font-size: 16px;
 `;
 
 const Value = styled.Text``;
 
 const Balance = styled.Text`
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #333;
 `;

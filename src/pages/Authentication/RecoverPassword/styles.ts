@@ -2,8 +2,8 @@ import styled from "styled-components/native";
 import theme from "../../../global/styles/theme";
 
 export const Text = styled.Text`
-    font-size: 18px;
-    margin: 20px;
+    font-size: 17px;
+    margin: 30px 10px;
     text-align: center;
 `;
 

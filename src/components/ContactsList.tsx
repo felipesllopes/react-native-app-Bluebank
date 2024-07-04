@@ -28,10 +28,8 @@ const Container = styled.TouchableOpacity`
 `;
 
 const Name = styled.Text`
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 `;
 
-const Cpf = styled.Text`
-    font-size: 17px;
-`;
+const Cpf = styled.Text``;

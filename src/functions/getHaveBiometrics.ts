@@ -1,13 +1,13 @@
-import { getBiometric } from "../storage";
+import * as Keychain from "react-native-keychain";
 
-/**
- * Function to find out if you have biometrics registered in the app.
- * @param setIsBiometry
- */
 export const getHaveBiometrics = async (
-    setIsBiometry: (value: boolean) => void,
+    setIsBiometry: React.Dispatch<React.SetStateAction<boolean>>,
 ) => {
-    await getBiometric().then(async value => {
-        setIsBiometry(await value);
-    });
+    await Keychain.getGenericPassword()
+        .then(val => {
+            setIsBiometry(true);
+        })
+        .catch(() => {
+            setIsBiometry(false);
+        });
 };

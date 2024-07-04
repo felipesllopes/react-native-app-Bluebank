@@ -8,11 +8,9 @@ export const Container = styled.SafeAreaView`
     background-color: ${theme.colors.background};
 `;
 
-export const Text = styled.Text``;
-
 export const Contacts = styled.Text`
-    font-size: 20px;
-    margin: 0 0 10px 20px;
+    font-size: 18px;
+    margin: 10px 20px;
     font-weight: bold;
 `;
 

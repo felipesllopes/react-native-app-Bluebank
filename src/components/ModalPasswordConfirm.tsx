@@ -54,7 +54,7 @@ export const ModalPasswordConfirm: React.FunctionComponent<IProps> = ({
 
         setLoading(true);
 
-        auth()
+        await auth()
             .currentUser.reauthenticateWithCredential(credentials)
             .then(async () => {
                 setPassword(value.password);

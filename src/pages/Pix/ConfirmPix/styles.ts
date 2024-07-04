@@ -28,17 +28,16 @@ export const IconAlert = styled(Ionicons)`
 `;
 
 export const TextConfirm = styled.Text`
-    font-size: 17px;
+    font-size: 16px;
     margin: 20px 0;
 `;
 
 export const Text = styled.Text`
-    font-size: 15px;
     color: ${theme.colors.text};
 `;
 
 export const Value = styled.TextInput`
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 `;
@@ -51,6 +50,6 @@ export const Line = styled.View`
 `;
 
 export const Data = styled.Text`
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 20px;
 `;

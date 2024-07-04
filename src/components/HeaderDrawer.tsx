@@ -57,7 +57,7 @@ const ContainerIcons = styled.View`
 `;
 
 const Icon = styled(Ionicons)`
-    font-size: 28px;
+    font-size: 26px;
     color: ${theme.colors.white};
 `;
 

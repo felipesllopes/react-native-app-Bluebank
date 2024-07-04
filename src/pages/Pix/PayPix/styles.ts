@@ -13,7 +13,7 @@ export const Scroll = styled.ScrollView`
 `;
 
 export const Title = styled.Text`
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 10px;
 `;
 
@@ -22,20 +22,20 @@ export const ViewDestinatary = styled.View`
 `;
 
 export const Name = styled.Text`
-    font-size: 21px;
+    font-size: 17px;
     font-weight: bold;
 `;
 
 export const Cpf = styled.Text`
-    font-size: 16px;
+    font-size: 15px;
 `;
 
 export const Value = styled.Text`
-    font-size: 16px;
+    font-size: 15px;
 `;
 
 export const ValueInput = styled.TextInput`
-    font-size: 23px;
+    font-size: 18px;
     font-weight: bold;
     border-bottom-width: 2px;
     padding: 0 0 5px 5px;
@@ -43,10 +43,11 @@ export const ValueInput = styled.TextInput`
 
 export const ViewPayer = styled.View`
     border-width: 1.5px;
-    padding: 10px;
+    padding: 10px 20px;
     margin: 30px;
     background-color: ${theme.colors.white};
     border-radius: 8px;
+    align-self: center;
 `;
 
 export const ViewTop = styled.View`
@@ -61,12 +62,11 @@ export const Logo = styled.Image`
 `;
 
 export const Account = styled.Text`
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
 `;
 
 export const Line = styled.View`
-    width: 100%;
     height: 1.5px;
     background-color: ${theme.colors.black};
     margin: 14px 0;
@@ -78,7 +78,7 @@ export const ViewBalance = styled.View`
 `;
 
 export const Balance = styled.Text`
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin: 0 3px;
 `;

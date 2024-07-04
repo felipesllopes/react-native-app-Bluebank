@@ -1,32 +1,19 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Alert } from "react-native";
 import ReactNativeBiometrics from "react-native-biometrics";
 import * as Keychain from "react-native-keychain";
 import { ModalPasswordConfirm } from "../../components/ModalPasswordConfirm";
 import { AuthContext } from "../../contexts/auth";
-import { setBiometric } from "../../storage";
 import { Button, Container, Img, Text, TextButton, Title } from "./styles";
 
 export const Biometry: React.FunctionComponent = () => {
     const rnBiometrics = new ReactNativeBiometrics();
     const { goBack } = useNavigation();
 
-    const [biometryType, setBiometryType] = useState(null);
     const { user } = useContext(AuthContext);
     const [show, setShow] = useState<boolean>(false);
     const [password, setPassword] = useState<string>("");
-
-    useEffect(() => {
-        rnBiometrics.isSensorAvailable().then(resultObject => {
-            const { available, biometryType } = resultObject;
-            if (available) {
-                setBiometryType(biometryType);
-            } else {
-                Alert.alert("Biometria não suportada");
-            }
-        });
-    }, []);
 
     const getRegisterBiometry = async () => {
         await rnBiometrics
@@ -48,14 +35,10 @@ export const Biometry: React.FunctionComponent = () => {
     };
 
     const handleFunction = async () => {
-        await Keychain.setGenericPassword(user.email, password).then(
-            async () => {
-                await setBiometric().then(() => {
-                    Alert.alert("Biometria cadastrada");
-                    goBack();
-                });
-            },
-        );
+        await Keychain.setGenericPassword(user.email, password).then(() => {
+            Alert.alert("Biometria cadastrada");
+            goBack();
+        });
     };
 
     return (

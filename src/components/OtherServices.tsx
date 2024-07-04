@@ -33,16 +33,13 @@ const CardButton = styled.TouchableOpacity`
     background-color: ${theme.colors.white};
     border-radius: 10px;
     padding: 6px 10px;
-    margin: 6px;
     margin-bottom: 10px;
 `;
 
 const Title = styled.Text`
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin-right: 6px;
 `;
 
-const Description = styled.Text`
-    font-size: 15px;
-`;
+const Description = styled.Text``;

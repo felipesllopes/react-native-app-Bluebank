@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Dimensions, View } from "react-native";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import styled from "styled-components/native";
@@ -17,18 +17,6 @@ export const CarouselSliders: React.FunctionComponent<IProps> = ({
     const itemWidth = sliderWidth * 0.97;
     const sliderRef = useRef<Carousel<ISliders>>(null);
     const { navigate } = useNavigation<IScreenNavigation>();
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveSlide(prevSlide => {
-                const nextSlide = (prevSlide + 1) % sliders.length;
-                sliderRef.current?.snapToItem(nextSlide);
-                return nextSlide;
-            });
-        }, 4000);
-
-        return () => clearInterval(interval);
-    }, [sliders.length]);
 
     const renderItem = ({ item }: { item: ISliders }) => {
         const dpi = Math.round(Dimensions.get("window").scale);
@@ -65,11 +53,13 @@ export const CarouselSliders: React.FunctionComponent<IProps> = ({
                 autoplay={true}
                 autoplayDelay={4000}
                 autoplayInterval={4000}
+                loop
+                activeAnimationType="decay"
             />
             <Pagination
                 dotsLength={sliders.length}
                 activeDotIndex={activeSlide}
-                containerStyle={{ marginTop: -10, marginBottom: 10 }}
+                containerStyle={{ marginTop: -14, marginBottom: 4 }}
                 dotStyle={{
                     width: 16,
                     height: 6,
@@ -90,6 +80,6 @@ export const Container = styled.TouchableOpacity`
 
 export const Banner = styled.Image`
     width: 100%;
-    aspect-ratio: 3;
+    aspect-ratio: 3.95;
     border-radius: 10px;
 `;

@@ -12,7 +12,7 @@ export const getAuthWithBiometry = async (
     const rnBiometrics = new ReactNativeBiometrics();
 
     await rnBiometrics
-        .simplePrompt({ promptMessage: "Confirmar impressão digital" })
+        .simplePrompt({ promptMessage: "     Confirmar impressão digital" })
         .then(async resultObject => {
             const { success } = resultObject;
             if (success) {
@@ -21,8 +21,8 @@ export const getAuthWithBiometry = async (
                     .then(async data => {
                         await auth()
                             .signInWithEmailAndPassword(
-                                data.username,
-                                data.password,
+                                data && data.username,
+                                data && data.password,
                             )
                             .then(async value => {
                                 const uid = value.user.uid;
@@ -52,8 +52,6 @@ export const getAuthWithBiometry = async (
                     .finally(() => {
                         setLoading(false);
                     });
-            } else {
-                Alert.alert("Solicitação biométrica cancelada pelo usuário");
             }
         })
         .catch(() => {

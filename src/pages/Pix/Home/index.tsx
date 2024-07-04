@@ -30,7 +30,7 @@ export const Pix: React.FunctionComponent = () => {
 
     return (
         <Container>
-            <Contacts>Lista de contatos</Contacts>
+            <Contacts>Contatos</Contacts>
             <FlatListContacts
                 data={listUsers}
                 renderItem={({ item }) => <ContactsList user={item} />}

@@ -48,4 +48,5 @@ const NameCard = styled.Text`
     text-align: center;
     margin-top: 6px;
     color: ${theme.colors.white};
+    font-size: 13px;
 `;

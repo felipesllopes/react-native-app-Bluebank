@@ -37,7 +37,7 @@ export const ButtonBiometry = styled.TouchableOpacity`
 `;
 
 export const TextBiometry = styled.Text`
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
     text-align: center;
     color: ${theme.colors.primary};
@@ -49,8 +49,8 @@ export const IconBiometry = styled.Image`
 `;
 
 export const Text = styled.Text`
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 700;
     text-align: center;
     margin: 60px 0;
 `;
@@ -64,6 +64,7 @@ export const ViewCheckBox = styled.View`
 
 export const TextCheck = styled.Text`
     margin-right: 5px;
+    font-size: 13px;
 `;
 
 export const TextRecoverPassword = styled.Text`
@@ -71,4 +72,5 @@ export const TextRecoverPassword = styled.Text`
     margin: 15px 10px 20px;
     text-decoration: underline;
     font-weight: 500;
+    font-size: 13px;
 `;

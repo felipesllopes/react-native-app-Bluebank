@@ -64,7 +64,6 @@ const Button = styled.TouchableOpacity`
 `;
 
 const TextButton = styled.Text`
-    font-size: 16px;
     font-weight: 600;
     color: ${theme.colors.white};
     text-align: center;

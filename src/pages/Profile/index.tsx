@@ -66,7 +66,7 @@ export const Profile: React.FunctionComponent = () => {
     };
 
     const handleFunction = async () => {
-        await getUpdateProfile(data, user, setUser, isChecked, setShow);
+        await getUpdateProfile(data, user, setUser, isChecked, setShow, password);
     };
 
     return (

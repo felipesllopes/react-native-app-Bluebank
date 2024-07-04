@@ -52,7 +52,7 @@ export const PayPix: React.FunctionComponent = () => {
     return (
         <Container>
             <Scroll showsVerticalScrollIndicator={false}>
-                <Title>Confirmar Pix para</Title>
+                <Title>Confirmar Pix para:</Title>
 
                 <ViewDestinatary>
                     <Name>{destinatary.name.toUpperCase()}</Name>

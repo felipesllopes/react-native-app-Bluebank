@@ -62,23 +62,3 @@ export const setEmail = async (email: string) => {
 export const removeItem = async (setUser: (value: IUser) => void) => {
     setUser({} as IUser);
 };
-
-/**
- * Função para cadastrar biometria
- */
-export const setBiometric = async () => {
-    await AsyncStorage.setItem("@keyBiometric", JSON.stringify(true));
-};
-
-/**
- * Função para verificar valor da biometria
- */
-export const getBiometric = async () => {
-    try {
-        const value = await AsyncStorage.getItem("@keyBiometric");
-        return value != null ? JSON.parse(value) : null;
-    } catch (error) {
-        console.error("Erro ao recuperar a preferência biométrica:", error);
-        return null;
-    }
-};

@@ -38,10 +38,10 @@ export const TextBalance = styled.Text`
 `;
 
 export const TextValue = styled.Text`
-    font-size: 23px;
+    font-size: 21px;
     color: white;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
 `;
 
 export const Body = styled.View`
@@ -60,7 +60,6 @@ export const ContainerList = styled.View`
 `;
 
 export const TextDate = styled.Text`
-    font-size: 15px;
     font-weight: 500;
     text-align: right;
     margin: 10px;
@@ -80,7 +79,7 @@ export const FlatListTransactions = styled(
 )``;
 
 export const NotFound = styled.Text`
-    font-size: 17px;
+    font-size: 15px;
     font-style: italic;
     color: ${theme.colors.text};
     text-align: center;

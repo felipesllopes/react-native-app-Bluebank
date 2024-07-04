@@ -18,7 +18,8 @@ export const ViewAlert = styled.View`
     justify-content: center;
     border-width: 1px;
     margin: 10px 0;
-    padding: 10px;
+    padding: 4px;
+    border-radius: 5px;
 `;
 
 export const IconCheck = styled(Ionicons)`
@@ -26,13 +27,13 @@ export const IconCheck = styled(Ionicons)`
 `;
 
 export const Value = styled.Text`
-    font-size: 23px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 `;
 
 export const Data = styled.Text`
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 20px;
 `;
 

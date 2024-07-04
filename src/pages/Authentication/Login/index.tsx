@@ -20,7 +20,7 @@ import { getHaveBiometrics } from "../../../functions/getHaveBiometrics";
 import { getSuportedBiometry } from "../../../functions/getSuportedBiometry";
 import theme from "../../../global/styles/theme";
 import { IFormLogin, IScreenNavigation } from "../../../interface";
-import { getBiometric, getItem } from "../../../storage";
+import { getItem } from "../../../storage";
 import {
     ButtonBiometry,
     Container,
@@ -107,7 +107,7 @@ export const Login: React.FunctionComponent = () => {
         (async () => {
             await getHaveBiometrics(setHaveBiometrics);
         })();
-    }, [getBiometric, setHaveBiometrics]);
+    }, [getHaveBiometrics, user, setHaveBiometrics]);
 
     useEffect(() => {
         (async () => {
@@ -195,6 +195,7 @@ export const Login: React.FunctionComponent = () => {
                                 onColor={theme.colors.primary}
                                 offColor={theme.colors.gray}
                                 onToggle={handleToggle}
+                                size="small"
                             />
                         </ViewCheckBox>
 

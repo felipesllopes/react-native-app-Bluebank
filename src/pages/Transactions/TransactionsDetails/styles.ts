@@ -15,8 +15,8 @@ export const BoxText = styled.View`
 `;
 
 export const TextBold = styled.Text`
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 700;
     color: ${theme.colors.white};
 `;
 
