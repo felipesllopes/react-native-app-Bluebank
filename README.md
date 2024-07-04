@@ -76,9 +76,11 @@ Monitoring of investments within the application.
 ## Image Screens: <a name="image-screens"> </a>
 
 
-<img src="https://github.com/felipesllopes/App-Bluebank/assets/99768939/c82b7b67-30d4-47f3-ab31-dbd95499d993" alt="Login screen capture" width="325,6" height="680">
-<img src="https://github.com/felipesllopes/App-Bluebank/assets/99768939/62b3e60f-4ef5-4e81-9d5a-a8ee928e63be" alt="Home screen capture" width="325,6" height="680">
+<img src="https://github.com/felipesllopes/App-Bluebank/assets/99768939/0cd23dca-c0e4-472d-a2c6-4912c7ba3cbf" alt="Login screen capture" width="325,6" height="680">
+<img src="https://github.com/felipesllopes/App-Bluebank/assets/99768939/c1985e0f-8d60-46b8-9209-1ae61b5d9050" alt="Home screen capture" width="325,6" height="680">
 <img src="https://github.com/felipesllopes/App-Bluebank/assets/99768939/7e4a88d7-d12f-4215-a8e1-271b6f5992dd" alt="Transactions screen capture" width="325,6" height="680">
+
+
 
 </br>
 </br>
