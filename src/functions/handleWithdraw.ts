@@ -1,6 +1,6 @@
+import firestore from "@react-native-firebase/firestore";
 import { Alert } from "react-native";
 import { IUser } from "../interface";
-import firestore from "@react-native-firebase/firestore";
 
 export const handleWithdraw = async (
     user: IUser,
@@ -89,14 +89,12 @@ export const handleWithdraw = async (
                         );
                         goBack();
                     })
-                    .catch(error => {
+                    .catch(() => {
                         alert("Erro ao realizar operação.");
-                        console.log(error);
                     });
             })
-            .catch(error => {
+            .catch(() => {
                 alert("Erro ao realizar operação.");
-                console.log(error);
             })
             .finally(() => {
                 setLoading(false);

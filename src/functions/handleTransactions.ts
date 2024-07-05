@@ -27,7 +27,6 @@ export const handleTransactions = async (
         })
         .catch(error => {
             alert("Erro ao exibir transações.");
-            console.log(error);
         })
         .finally(() => {
             setLoading(false);

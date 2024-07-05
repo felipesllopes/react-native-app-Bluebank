@@ -21,7 +21,7 @@ export const handlePix = async (
         .collection("transactions")
         .doc(key)
         .set({
-            type: "PIX enviado",
+            type: "Pix enviado",
             value: val,
             date: new Date().toLocaleString(),
             balance: user.balance - val,
@@ -48,7 +48,7 @@ export const handlePix = async (
                         .collection("transactions")
                         .doc(key)
                         .set({
-                            type: "PIX recebido",
+                            type: "Pix recebido",
                             value: val,
                             date: new Date().toLocaleString(),
                             balance: destinatary.balance + val,
@@ -64,25 +64,18 @@ export const handlePix = async (
                                 })
                                 .catch(error => {
                                     alert("Erro ao tentar realizar Pix.");
-                                    console.log(error);
-                                })
-                                .finally(() => {
-                                    setLoading(false);
                                 });
                         })
                         .catch(error => {
                             alert("Erro ao tentar realizar Pix.");
-                            console.log(error);
                         });
                 })
                 .catch(error => {
                     alert("Erro ao tentar realizar Pix.");
-                    console.log(error);
                 });
         })
         .catch(error => {
             alert("Erro ao tentar realizar Pix.");
-            console.log(error);
         })
         .finally(() => {
             setLoading(false);

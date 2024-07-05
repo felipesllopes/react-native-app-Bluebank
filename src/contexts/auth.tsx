@@ -68,14 +68,12 @@ export const AuthProvider: React.FunctionComponent<IProps> = ({ children }) => {
                         };
                         setUser(dados);
                     })
-                    .catch(error => {
+                    .catch(() => {
                         alert("Erro ao obter dados do usuário.");
-                        console.log(error);
                     });
             })
-            .catch(error => {
+            .catch(() => {
                 alert("Erro ao cadastrar usuário.");
-                console.log(error);
             })
             .finally(() => {
                 setLoading(false);
@@ -114,14 +112,12 @@ export const AuthProvider: React.FunctionComponent<IProps> = ({ children }) => {
                             await setEmail(data.email);
                         }
                     })
-                    .catch(error => {
+                    .catch(() => {
                         alert("Erro ao buscar os dados do usuário.");
-                        console.log(error);
                     });
             })
-            .catch(error => {
+            .catch(() => {
                 alert("Erro ao fazer login");
-                console.log(error);
             })
             .finally(async () => {
                 setLoading(false);
@@ -147,11 +143,10 @@ export const AuthProvider: React.FunctionComponent<IProps> = ({ children }) => {
                 );
                 setMessage(`E-mail enviado para: \n ${data.email}`);
             })
-            .catch(error => {
+            .catch(() => {
                 alert(
                     "Erro ao tentar recuperar e-mail. Verifique o e-mail cadastrado.",
                 );
-                console.log(error);
             })
             .finally(() => {
                 setLoading(false);
@@ -176,9 +171,8 @@ export const AuthProvider: React.FunctionComponent<IProps> = ({ children }) => {
                         .then(async () => {
                             await removeItem(setUser);
                         })
-                        .catch(error => {
+                        .catch(() => {
                             alert("Erro ao sair.");
-                            console.log(error);
                         })
                         .finally(() => {
                             setLoading(false);

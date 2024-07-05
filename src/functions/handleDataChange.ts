@@ -50,14 +50,12 @@ export const handleDataChange = async (
                         setShow(false);
                     }
                 })
-                .catch(error => {
+                .catch(() => {
                     alert("Erro ao atualizar informações.");
-                    console.log(error);
                 });
         })
-        .catch(error => {
+        .catch(() => {
             alert("Senha incorreta");
-            console.log(error);
         })
         .finally(() => {
             setLoading(false);

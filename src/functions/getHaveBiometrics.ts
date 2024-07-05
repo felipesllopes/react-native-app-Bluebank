@@ -4,7 +4,7 @@ export const getHaveBiometrics = async (
     setIsBiometry: React.Dispatch<React.SetStateAction<boolean>>,
 ) => {
     await Keychain.getGenericPassword()
-        .then(val => {
+        .then(() => {
             setIsBiometry(true);
         })
         .catch(() => {

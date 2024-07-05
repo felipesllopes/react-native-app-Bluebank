@@ -74,14 +74,12 @@ export const handleDeposit = async (
                         );
                         goBack();
                     })
-                    .catch(error => {
+                    .catch(() => {
                         alert("Erro ao realizar operação.");
-                        console.log(error);
                     });
             })
-            .catch(error => {
+            .catch(() => {
                 alert("Erro ao realizar operação.");
-                console.log(error);
             })
             .finally(() => {
                 setLoading(false);
